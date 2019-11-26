@@ -1,110 +1,162 @@
-body{
-  margin:0;
+*{
+    box-sizing: border-box;
 }
 
+body{
+  margin: 0;
+}
+/*  Large devices (desktops, 992px and up) */
+/*Header*/
+.background-over{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.7;
+}
 
 header{
   width: 100%;
   height: 100vh;
-  background: url("../images/HeaderBackground1920x1280.jpg");
+  background-image: url("../images/HeaderBackground1920x1280.jpg");
+  font-family: 'Ubuntu', sans-serif;
 }
 
+.content-header, .introduction{
+  position: relative;
 
-
-.content-header {
-  padding-top: 10px;
 }
 
-#logo{
+/*content-header part*/
+.content-header{
+  padding-top: 20px;
+}
+
+.content-header h1{
   margin:0;
-  float: left;
-  padding-left: 5%;
   color:#F33E57;
 }
 
-.content-header ul  {
+#logo{
+  float:left;
+  padding-left: 5%;
+}
+
+header ul{
   float:right;
   padding-right: 5%;
 }
 
-.content-header ul li {
-  float: left;
-  padding-right: 50px;
+header ul li {
+  float:left;
+  height: 50px;
   list-style: none;
+  padding-right:50px;
 }
 
-
-.content-header ul li a{
-  color:white;
+header ul li a {
   text-decoration: none;
-}
-
-
-.introduction {
-  padding: 10% 25%;
   color:white;
 }
 
-.introduction h1 {
-  clear: both;
-  text-align: center;
+/*introduction part*/
+
+
+.introduction{
+  margin-top: 10%;
+  padding: 10% 25% ;
+  color:white;
+}
+
+.introduction h1{
   font-size: 45px;
-  line-height: 45px;
+  line-height: 40px;
 }
 
-.introduction h5 {
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 25px
+.introduction h5{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
 }
 
-main {
-  padding: 10px;
-}
 
+
+
+/*parts of services*/
 main > h1 {
   text-align: center;
-  color: black;
-  font-size:40px;
-  margin-top: 40px;
+  color:#4A4C4B;
+  font-size: 60px;
 }
 
+main{
+  margin: 0 auto;
+  padding: 10px;
+
+}
 
 main .part-services{
   float: left;
-  width:25%;
+  width: 25%;
+  text-align: center;
   padding: 10px;
-  box-sizing: border-box;
-  text-align: center;
+
 }
 
 
-.services-content  p{
-  text-align: justify;
+main h3{
+  font-size: 25px;
+}
+
+.part-services p{
+  font-size: 14px;
+  line-height: 22px;
+  padding: 0;
+  text-align:justify;
 }
 
 
-.services-content p {
-  text-align: center;
-}
-
-
+                  /*  Start here  */
 /* --------- START THE CODE HERE ------- */
 
-/*  Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
-  
- }
 
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
- 
-
- }
-
-
-/*  Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-
- }
+/*  Small devices (phones, 576px and up) */
+@media only screen and (max-width: 576px) {
+  #logo{
+    float: none;
+  }
+  header ul{
+    float: none;
+  }
+  header ul li {
+    float: none;
+    width: 100%;
+    height: 35px;
+    text-align: center;
+  }
+  .introduction{
+    margin: 0;
+    padding: 30px;
+    text-align: left;
+  }
+  .introduction h1{
+    padding-top: 5px;
+    font-size: 25px;
+  }
+  .introduction h5{
+    font-size: 15px;
+  }
+  main .part-services{
+    float: none;
+    width: 100%;
+   }
+}
+ /* Medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 577px) and (max-width:991px) {
+  main .part-services{
+    width: 50%;
+    float:left;
+  }
+}
